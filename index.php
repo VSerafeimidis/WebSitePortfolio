@@ -1,0 +1,155 @@
+<?php get_header(); ?>
+
+<header>
+
+        <div class="container" style="display: flex;">
+
+            <div class="logo">
+                <img src="https://shmector.com/_ph/18/749226765.png" alt="logo" style="width: 50px;">
+            </div>
+         
+            <nav class="nav">
+              
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+              
+            </nav>
+
+            <div class="menu-icon">&#9776;</div>
+          
+        </div>
+
+    </header>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.querySelector(".menu-icon");
+            const nav = document.querySelector(".nav");
+
+            menuIcon.addEventListener("click", function () {
+                nav.classList.toggle("active");
+            });
+        });
+
+    </script>
+
+    <script>
+
+        function toggleMenu() {
+          var menu = document.getElementById('menuContent');
+          if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        }
+      
+        // Κλείνει το μενού αν γίνει κλικ έξω από αυτό
+        window.onclick = function(event) {
+          if (!event.target.matches('.menu-button')) {
+            var menus = document.getElementsByClassName('menu-content');
+            for (var i = 0; i < menus.length; i++) {
+              var openMenu = menus[i];
+              if (openMenu.style.display === 'block') {
+                openMenu.style.display = 'none';
+              }
+            }
+          }
+        }
+    </script>
+
+
+    <section class="hero">
+
+        <div class="container">
+            <h1>Welcome to <span> serafo </span> website. </h1>
+            <p>With respect and vision, we build the future, together we move forward, achieving goals.</p>
+            <br>
+            <a href="https://www.linkedin.com/in/vasilios-serafeimidis-048ab7196/" class="btn">Learn More</a>
+        </div>
+
+    </section>
+
+    <section id="about" class="section">
+
+        <h2 style="margin-top: 30px; margin-bottom: 30px;">Services</h2>
+            
+        <div class="services">
+            <div class="service">
+                <h3>Web Design</h3>
+                <p>Stunning and functional websites tailored to your needs</p>
+            </div>
+            <div class="service">
+                <h3>Development</h3>
+                <p>Robust and scalable solutions for your business</p>
+            </div>
+            <div class="service">
+                <h3>Branding</h3>
+                <p>Unique and memorable branding for your company</p>
+            </div>
+            <div class="service">
+                <h3>Blockchain</h3>
+                <p>I am actively involved in blockchain technology, 
+                    focusing on innovative solutions, decentralization 
+                    and digital security</p>
+            </div>
+            <div class="service">
+                <h3>SEO</h3>
+                <p>I specialize in website optimization, 
+                    enhancing speed, SEO and user experience 
+                    for maximum performance</p>
+            </div>
+            <div class="service">
+                <h3>Financial</h3>
+                <p>I am involved in financial management, offering analysis, 
+                    planning and optimization of financial strategies for 
+                    sustainable development.</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="project" class="section">
+        
+        <h2 style="margin-top: 30px; margin-bottom: 30px;">Project</h2>
+
+        <div class="project-posts">
+                
+            <div class="project-card">
+                <img src="https://static.wixstatic.com/media/0e0314_985b66bb51f24780b94f0711b6de7113~mv2.jpg/v1/fill/w_740,h_487,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e0314_985b66bb51f24780b94f0711b6de7113~mv2.jpg" alt="Project Image">
+                <h3>Personal WebSite</h3>
+                <p>Short description of the project that gives an idea of ​​its content.</p>
+                <button onclick="showDetails()">Learn more</button>
+            </div>
+
+        </div>
+        
+        <script>
+            function showDetails() {
+                alert("The Website was created by Vasilios Serafemidis");
+            }
+        </script>
+
+    </section>
+
+    <section id="contact" class="section">
+
+       <h3 style="margin-top: 20px;">Contact</h3>
+
+        <form>
+            <div class="contact">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </form>
+        
+    </section>
+
+<?php get_footer(); ?>
